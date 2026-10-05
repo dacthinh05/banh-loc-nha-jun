@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="3 0 256 256" width="256" height="256" role="img" aria-labelledby="titleB">
+  <title id="titleB">Logo Bánh Lọc Nhà Jun — Concept B: Cánh Bánh Bán Nguyệt &amp; Tôm Rim</title>
+  <g id="symbol">
+    <!-- Phiến Lá Chuối Nâng Đỡ Đáy Bánh (Banana Leaf Base) -->
+    <path fill="#1A4329" d="M20 176
+      C64 198 126 202 188 186
+      C218 178 234 166 242 156
+      C220 168 180 180 130 180
+      C76 180 38 172 20 176 Z"/>
+
+    <!-- Vỏ Bánh Lọc Bán Nguyệt với 4 Nếp Gấp Mí và Cửa Sổ Bột Trong (Pleated Dumpling Shell) -->
+    <path fill="#1A4329" fill-rule="evenodd" d="M38 164
+      C42 130 60 88 88 78
+      C100 74 110 78 112 88
+      C124 82 136 88 138 98
+      C150 94 162 102 162 114
+      C174 114 184 126 182 138
+      C190 144 194 156 190 166
+      C144 174 90 172 38 164 Z
+      M58 158
+      C66 128 88 108 120 108
+      C150 108 168 130 172 158
+      C136 164 94 164 58 158 Z"/>
+
+    <!-- Chú Tôm Rim Đỏ Son Uốn Lượn Trong Bánh (Braised Shrimp Filling) -->
+    <path fill="#9E2A1C" d="M88 150
+      C94 132 114 122 132 126
+      C140 128 146 134 142 142
+      C138 148 130 148 122 146
+      C112 144 104 148 100 154
+      C96 158 92 156 88 150 Z"/>
+    <path fill="#9E2A1C" d="M132 126 C138 118 148 118 152 122 C152 126 146 130 142 128 Z"/>
+
+    <!-- Điểm Nhấn Mỡ Hành Vàng Hổ Phách (Golden Scallion Oil) -->
+    <circle cx="116" cy="138" r="4.5" fill="#D9822B"/>
+  </g>
+</svg>

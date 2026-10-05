@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 256" width="880" height="256" role="img" aria-labelledby="titleLockupC">
+  <title id="titleLockupC">Logo Bánh Lọc Nhà Jun — Concept C Lockup</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&amp;family=Inter:wght@600;700&amp;display=swap');
+      .brand-title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 900;
+        font-size: 52px;
+        fill: #1A4329;
+        letter-spacing: -0.5px;
+      }
+      .brand-accent {
+        fill: #9E2A1C;
+      }
+      .brand-sub {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        fill: #635445;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+
+  <!-- Biểu Tượng (Symbol) -->
+  <g transform="translate(36, 38.0) scale(0.703125)">
+    <g id="symbol">
+    <!-- Làn Khói Thơm Nghi Ngút Từ Nồi Hấp (Rising Aromatic Steam) -->
+    <path fill="#D9822B" d="M116 36
+      C112 48 120 58 116 70
+      C114 72 112 72 110 70
+      C108 58 116 48 112 36
+      C113 34 115 34 116 36 Z"/>
+    <path fill="#D9822B" d="M140 36
+      C144 48 136 58 140 70
+      C142 72 144 72 146 70
+      C148 58 140 48 144 36
+      C143 34 141 34 140 36 Z"/>
+
+    <!-- Núm Nắp Xửng Tre (Steamer Lid Handle) -->
+    <rect x="114" y="68" width="28" height="10" rx="5" fill="#1A4329"/>
+
+    <!-- Nắp Xửng Tre Bo Vòm (Steamer Lid Arch) -->
+    <path fill="#1A4329" d="M42 120
+      C48 90 84 80 128 80
+      C172 80 208 90 214 120
+      Z"/>
+    <!-- Vành Nẹp Nắp Tre (Lid Rim Band) -->
+    <rect x="36" y="118" width="184" height="12" rx="4" fill="#1A4329"/>
+
+    <!-- Thân Xửng Tre Hấp Bánh (Steamer Basket Body) -->
+    <path fill="#1A4329" d="M44 134
+      L212 134
+      L202 208
+      C200 216 192 222 184 222
+      L72 222
+      C64 222 56 216 54 208
+      Z"/>
+
+    <!-- Đường Rãnh Nan Nứa Đan Thân Xửng (Bamboo Slat Groove) -->
+    <rect x="52" y="172" width="152" height="4" rx="2" fill="#D9822B"/>
+
+    <!-- Biểu Tượng Chữ J & Tôm Rim Đỏ Trên Thân Xửng (J Monogram & Red Shrimp on Pot) -->
+    <!-- Khoảng âm bản hình chữ J -->
+    <path fill="#D9822B" d="M120 148
+      L134 148
+      L134 186
+      C134 196 124 204 112 204
+      C100 204 92 196 92 188
+      C92 184 96 180 100 180
+      C104 180 108 184 108 188
+      C108 192 112 194 116 194
+      C120 194 124 190 124 186
+      Z"/>
+    <!-- Hạt Ngọc Tôm Rim Đỏ (Crimson Shrimp Accent Dot) -->
+    <circle cx="148" cy="166" r="9" fill="#9E2A1C"/>
+  </g>
+
+  </g>
+
+  <!-- Tên Thương Hiệu (Wordmark Lockup) -->
+  <g id="wordmark">
+    <text x="250" y="124" class="brand-title">BÁNH LỌC <tspan class="brand-accent">NHÀ JUN</tspan></text>
+    <circle cx="254" cy="162" r="3" fill="#D9822B"/>
+    <text x="268" y="167" class="brand-sub">ĐẶC SẢN GIA TRUYỀN QUẢNG BÌNH</text>
+  </g>
+</svg>
