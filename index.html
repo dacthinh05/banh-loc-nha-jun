@@ -305,6 +305,26 @@
       opacity: 1;
       transform: translateY(0);
     }
+    /* Continuous Customer Reviews Marquee */
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 42s linear infinite;
+    }
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
     /* Culinary Card Hover Effect (Subtle, Elegant, No 3D Distortion) */
     .card-culinary {
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
@@ -967,61 +987,186 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Review 1 -->
-        <div class="rounded-2xl bg-white border border-[#E5DACD] p-6 shadow-xs flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex items-center gap-1 text-amber-400">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      <!-- Continuous Auto-running Marquee Review Ribbon -->
+      <div class="marquee-container py-2">
+        <div class="marquee-track flex gap-5">
+          <!-- Review 1: Lan Anh -->
+          <div class="w-[320px] sm:w-[350px] shrink-0 p-5 rounded-2xl bg-white border border-[#E5DACD] shadow-xs flex flex-col justify-between hover:shadow-md hover:border-[#9E2A1C]/30 transition-all">
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-1 text-amber-400 text-xs"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">"Bột lọc dẻo trong veo, tôm rim mặn ngọt cay xé lưỡi đúng vị mẹ nấu ở Lệ Thủy. Đặt 50 cái cấp đông gửi xe vào Sài Gòn vẫn nguyên vẹn tươi ngon!"</p>
             </div>
-            <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">
-              "Bột lọc dẻo trong veo, tôm rim mặn ngọt cay xé lưỡi đúng vị mẹ nấu ở Lệ Thủy. Đặt 50 cái cấp đông gửi xe vào Sài Gòn vẫn nguyên vẹn tươi ngon!"
-            </p>
-          </div>
-          <div class="pt-4 mt-4 border-t border-stone-100 flex items-center justify-between">
-            <div>
-              <p class="font-bold text-xs text-[#1C150E]">Chị Lan Anh</p>
-              <p class="text-[11px] text-stone-500">Quận 1, TP. Hồ Chí Minh</p>
+            <div class="pt-3 mt-3 border-t border-stone-100 flex items-center justify-between">
+              <div><p class="font-bold text-xs text-[#1C150E]">Chị Lan Anh</p><p class="text-[11px] text-stone-500">Quận 1, TP. Hồ Chí Minh</p></div>
+              <span class="text-[10px] bg-emerald-50 text-emerald-700 font-semibold px-2 py-0.5 rounded-full">Đã mua 50 cái</span>
             </div>
-            <span class="text-[10px] bg-emerald-50 text-emerald-700 font-semibold px-2 py-0.5 rounded-full">Đã mua 50 cái</span>
           </div>
-        </div>
+          <!-- Review 2: Đức Hoàng -->
+          <div class="w-[320px] sm:w-[350px] shrink-0 p-5 rounded-2xl bg-white border-2 border-[#9E2A1C]/20 p-5 shadow-xs flex flex-col justify-between bg-gradient-to-b from-white to-[#FDFBF7] hover:shadow-md hover:border-[#9E2A1C]/40 transition-all">
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-1 text-amber-400 text-xs"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">"Nhân măng thịt nấm giòn ngọt tự nhiên, nước mắm ớt pha đỉnh chóp. Cuối tuần nào gia đình mình cũng hấp 1 xửng ăn sáng, các cháu mê tít."</p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 flex items-center justify-between">
+              <div><p class="font-bold text-xs text-[#1C150E]">Anh Đức Hoàng</p><p class="text-[11px] text-stone-500">Cầu Giấy, Hà Nội</p></div>
+              <span class="text-[10px] bg-red-50 text-[#9E2A1C] font-semibold px-2 py-0.5 rounded-full">Khách quen 2 năm</span>
+            </div>
+          </div>
+          <!-- Review 3: Minh Trang -->
+          <div class="w-[320px] sm:w-[350px] shrink-0 p-5 rounded-2xl bg-white border border-[#E5DACD] shadow-xs flex flex-col justify-between hover:shadow-md hover:border-[#9E2A1C]/30 transition-all">
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-1 text-amber-400 text-xs"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">"Đặt 120 cái cho tiệc sinh nhật công ty, anh Quang Sơn giao đúng giờ, bánh nóng hổi bốc khói kèm hành phi thơm phức. Ai cũng khen ngon!"</p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 flex items-center justify-between">
+              <div><p class="font-bold text-xs text-[#1C150E]">Bạn Minh Trang</p><p class="text-[11px] text-stone-500">TP. Đồng Hới, Quảng Bình</p></div>
+              <span class="text-[10px] bg-amber-50 text-amber-800 font-semibold px-2 py-0.5 rounded-full">Đặt tiệc công ty</span>
+            </div>
+          </div>
+          <!-- Review 4: Nguyễn Phượng -->
+          <div class="w-[320px] sm:w-[350px] shrink-0 p-5 rounded-2xl bg-white border border-[#E5DACD] shadow-xs flex flex-col justify-between hover:shadow-md hover:border-[#9E2A1C]/30 transition-all">
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-1 text-amber-400 text-xs"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">"Nhân măng thịt nấm với bánh chay vị thanh tao, vỏ bột lọc trong veo dai dẻo chuẩn bài. Mình đặt 100 cái cấp đông gửi vào Đà Nẵng, sáng nào hấp cho cả nhà ăn ai cũng tấm tắc khen."</p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 flex items-center justify-between">
+              <div><p class="font-bold text-xs text-[#1C150E]">Chị Nguyễn Phượng</p><p class="text-[11px] text-stone-500">Hải Châu, Đà Nẵng</p></div>
+              <span class="text-[10px] bg-emerald-50 text-emerald-700 font-semibold px-2 py-0.5 rounded-full">Đã mua 100 cái</span>
+            </div>
+          </div>
+          <!-- Review 5: Minh Thư -->
+          <div class="w-[320px] sm:w-[350px] shrink-0 p-5 rounded-2xl bg-white border border-[#E5DACD] shadow-xs flex flex-col justify-between hover:shadow-md hover:border-[#9E2A1C]/30 transition-all">
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-1 text-amber-400 text-xs"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">"Là đứa nghiện bánh lọc mà ở Hà Nội tìm đỏ mắt mới thấy quán chuẩn vị Lệ Thủy như Nhà Jun. Tôm rim mặn ngọt đậm đà, nước mắm ớt cay tê tái hít hà đã đời. Đặt combo mix 20 ăn no căng!"</p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 flex items-center justify-between">
+              <div><p class="font-bold text-xs text-[#1C150E]">Bạn Minh Thư</p><p class="text-[11px] text-stone-500">Thanh Xuân, Hà Nội</p></div>
+              <span class="text-[10px] bg-rose-50 text-rose-700 font-semibold px-2 py-0.5 rounded-full">Combo Mix 20</span>
+            </div>
+          </div>
+          <!-- Review 6: Trương Thảo -->
+          <div class="w-[320px] sm:w-[350px] shrink-0 p-5 rounded-2xl bg-white border border-[#E5DACD] shadow-xs flex flex-col justify-between hover:shadow-md hover:border-[#9E2A1C]/30 transition-all">
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-1 text-amber-400 text-xs"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">"Đặt 80 cái cho tiệc giỗ gia đình ở Sài Gòn, giao đến bánh nóng hổi thơm nức mùi lá chuối và hành phi giòn tan. Các cô chú lớn tuổi khó tính trong nhà ai ăn cũng gật gù khen ngon."</p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 flex items-center justify-between">
+              <div><p class="font-bold text-xs text-[#1C150E]">Chị Trương Thảo</p><p class="text-[11px] text-stone-500">Bình Thạnh, TP. Hồ Chí Minh</p></div>
+              <span class="text-[10px] bg-amber-50 text-amber-800 font-semibold px-2 py-0.5 rounded-full">Đặt tiệc gia đình</span>
+            </div>
+          </div>
+          <!-- Review 7: Linh Trịnh -->
+          <div class="w-[320px] sm:w-[350px] shrink-0 p-5 rounded-2xl bg-white border border-[#E5DACD] shadow-xs flex flex-col justify-between hover:shadow-md hover:border-[#9E2A1C]/30 transition-all">
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-1 text-amber-400 text-xs"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">"Đặt giao trưa cho nhóm văn phòng, shipper giao đúng hẹn, hộp giữ nhiệt mở ra khói nghi ngút. Bánh mềm trong, nhân đầy đặn cắn ngập miệng, chấm đẫm mắm ớt là quên lối về."</p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 flex items-center justify-between">
+              <div><p class="font-bold text-xs text-[#1C150E]">Cô Linh Trịnh</p><p class="text-[11px] text-stone-500">Hoàn Kiếm, Hà Nội</p></div>
+              <span class="text-[10px] bg-sky-50 text-sky-700 font-semibold px-2 py-0.5 rounded-full">Ăn trưa văn phòng</span>
+            </div>
+          </div>
+          <!-- Review 8: Thịnh Lynx -->
+          <div class="w-[320px] sm:w-[350px] shrink-0 p-5 rounded-2xl bg-white border-2 border-[#1A4329]/30 shadow-xs flex flex-col justify-between bg-gradient-to-b from-white to-[#F5EDE1] hover:shadow-md hover:border-[#1A4329] transition-all">
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-1 text-amber-400 text-xs"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">"Người con Quảng Bình xa quê 6 năm, ăn miếng bánh lọc Nhà Jun mà xúc động nhớ vị mẹ làm ở quê. Tôm đồng đỏ au chắc thịt, măng le giòn sần sật, đúng chất 100% không lai tạp."</p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 flex items-center justify-between">
+              <div><p class="font-bold text-xs text-[#1C150E]">Anh Thịnh Lynx</p><p class="text-[11px] text-stone-500">Quận 7, TP. Hồ Chí Minh</p></div>
+              <span class="text-[10px] bg-emerald-50 text-emerald-800 font-semibold px-2 py-0.5 rounded-full">Khách quen 1 năm</span>
+            </div>
+          </div>
 
-        <!-- Review 2 -->
-        <div class="rounded-2xl bg-white border-2 border-[#9E2A1C]/20 p-6 shadow-xs flex flex-col justify-between bg-gradient-to-b from-white to-[#FDFBF7]">
-          <div class="space-y-3">
-            <div class="flex items-center gap-1 text-amber-400">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          <!-- Duplicate 8 Reviews for Seamless Infinite Marquee Loop -->
+          <!-- Review 1: Lan Anh -->
+          <div class="w-[320px] sm:w-[350px] shrink-0 p-5 rounded-2xl bg-white border border-[#E5DACD] shadow-xs flex flex-col justify-between hover:shadow-md hover:border-[#9E2A1C]/30 transition-all">
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-1 text-amber-400 text-xs"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">"Bột lọc dẻo trong veo, tôm rim mặn ngọt cay xé lưỡi đúng vị mẹ nấu ở Lệ Thủy. Đặt 50 cái cấp đông gửi xe vào Sài Gòn vẫn nguyên vẹn tươi ngon!"</p>
             </div>
-            <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">
-              "Nhân măng thịt nấm giòn ngọt tự nhiên, nước mắm ớt pha đỉnh chóp. Cuối tuần nào gia đình mình cũng hấp 1 xửng ăn sáng, các cháu mê tít."
-            </p>
+            <div class="pt-3 mt-3 border-t border-stone-100 flex items-center justify-between">
+              <div><p class="font-bold text-xs text-[#1C150E]">Chị Lan Anh</p><p class="text-[11px] text-stone-500">Quận 1, TP. Hồ Chí Minh</p></div>
+              <span class="text-[10px] bg-emerald-50 text-emerald-700 font-semibold px-2 py-0.5 rounded-full">Đã mua 50 cái</span>
+            </div>
           </div>
-          <div class="pt-4 mt-4 border-t border-stone-100 flex items-center justify-between">
-            <div>
-              <p class="font-bold text-xs text-[#1C150E]">Anh Đức Hoàng</p>
-              <p class="text-[11px] text-stone-500">Cầu Giấy, Hà Nội</p>
+          <!-- Review 2: Đức Hoàng -->
+          <div class="w-[320px] sm:w-[350px] shrink-0 p-5 rounded-2xl bg-white border-2 border-[#9E2A1C]/20 p-5 shadow-xs flex flex-col justify-between bg-gradient-to-b from-white to-[#FDFBF7] hover:shadow-md hover:border-[#9E2A1C]/40 transition-all">
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-1 text-amber-400 text-xs"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">"Nhân măng thịt nấm giòn ngọt tự nhiên, nước mắm ớt pha đỉnh chóp. Cuối tuần nào gia đình mình cũng hấp 1 xửng ăn sáng, các cháu mê tít."</p>
             </div>
-            <span class="text-[10px] bg-red-50 text-[#9E2A1C] font-semibold px-2 py-0.5 rounded-full">Khách quen 2 năm</span>
+            <div class="pt-3 mt-3 border-t border-stone-100 flex items-center justify-between">
+              <div><p class="font-bold text-xs text-[#1C150E]">Anh Đức Hoàng</p><p class="text-[11px] text-stone-500">Cầu Giấy, Hà Nội</p></div>
+              <span class="text-[10px] bg-red-50 text-[#9E2A1C] font-semibold px-2 py-0.5 rounded-full">Khách quen 2 năm</span>
+            </div>
           </div>
-        </div>
-
-        <!-- Review 3 -->
-        <div class="rounded-2xl bg-white border border-[#E5DACD] p-6 shadow-xs flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex items-center gap-1 text-amber-400">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          <!-- Review 3: Minh Trang -->
+          <div class="w-[320px] sm:w-[350px] shrink-0 p-5 rounded-2xl bg-white border border-[#E5DACD] shadow-xs flex flex-col justify-between hover:shadow-md hover:border-[#9E2A1C]/30 transition-all">
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-1 text-amber-400 text-xs"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">"Đặt 120 cái cho tiệc sinh nhật công ty, anh Quang Sơn giao đúng giờ, bánh nóng hổi bốc khói kèm hành phi thơm phức. Ai cũng khen ngon!"</p>
             </div>
-            <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">
-              "Đặt 120 cái cho tiệc sinh nhật công ty, anh Quang Sơn giao đúng giờ, bánh nóng hổi bốc khói kèm hành phi thơm phức. Ai cũng khen ngon!"
-            </p>
+            <div class="pt-3 mt-3 border-t border-stone-100 flex items-center justify-between">
+              <div><p class="font-bold text-xs text-[#1C150E]">Bạn Minh Trang</p><p class="text-[11px] text-stone-500">TP. Đồng Hới, Quảng Bình</p></div>
+              <span class="text-[10px] bg-amber-50 text-amber-800 font-semibold px-2 py-0.5 rounded-full">Đặt tiệc công ty</span>
+            </div>
           </div>
-          <div class="pt-4 mt-4 border-t border-stone-100 flex items-center justify-between">
-            <div>
-              <p class="font-bold text-xs text-[#1C150E]">Bạn Minh Trang</p>
-              <p class="text-[11px] text-stone-500">TP. Đồng Hới, Quảng Bình</p>
+          <!-- Review 4: Nguyễn Phượng -->
+          <div class="w-[320px] sm:w-[350px] shrink-0 p-5 rounded-2xl bg-white border border-[#E5DACD] shadow-xs flex flex-col justify-between hover:shadow-md hover:border-[#9E2A1C]/30 transition-all">
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-1 text-amber-400 text-xs"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">"Nhân măng thịt nấm với bánh chay vị thanh tao, vỏ bột lọc trong veo dai dẻo chuẩn bài. Mình đặt 100 cái cấp đông gửi vào Đà Nẵng, sáng nào hấp cho cả nhà ăn ai cũng tấm tắc khen."</p>
             </div>
-            <span class="text-[10px] bg-amber-50 text-amber-800 font-semibold px-2 py-0.5 rounded-full">Đặt tiệc công ty</span>
+            <div class="pt-3 mt-3 border-t border-stone-100 flex items-center justify-between">
+              <div><p class="font-bold text-xs text-[#1C150E]">Chị Nguyễn Phượng</p><p class="text-[11px] text-stone-500">Hải Châu, Đà Nẵng</p></div>
+              <span class="text-[10px] bg-emerald-50 text-emerald-700 font-semibold px-2 py-0.5 rounded-full">Đã mua 100 cái</span>
+            </div>
+          </div>
+          <!-- Review 5: Minh Thư -->
+          <div class="w-[320px] sm:w-[350px] shrink-0 p-5 rounded-2xl bg-white border border-[#E5DACD] shadow-xs flex flex-col justify-between hover:shadow-md hover:border-[#9E2A1C]/30 transition-all">
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-1 text-amber-400 text-xs"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">"Là đứa nghiện bánh lọc mà ở Hà Nội tìm đỏ mắt mới thấy quán chuẩn vị Lệ Thủy như Nhà Jun. Tôm rim mặn ngọt đậm đà, nước mắm ớt cay tê tái hít hà đã đời. Đặt combo mix 20 ăn no căng!"</p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 flex items-center justify-between">
+              <div><p class="font-bold text-xs text-[#1C150E]">Bạn Minh Thư</p><p class="text-[11px] text-stone-500">Thanh Xuân, Hà Nội</p></div>
+              <span class="text-[10px] bg-rose-50 text-rose-700 font-semibold px-2 py-0.5 rounded-full">Combo Mix 20</span>
+            </div>
+          </div>
+          <!-- Review 6: Trương Thảo -->
+          <div class="w-[320px] sm:w-[350px] shrink-0 p-5 rounded-2xl bg-white border border-[#E5DACD] shadow-xs flex flex-col justify-between hover:shadow-md hover:border-[#9E2A1C]/30 transition-all">
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-1 text-amber-400 text-xs"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">"Đặt 80 cái cho tiệc giỗ gia đình ở Sài Gòn, giao đến bánh nóng hổi thơm nức mùi lá chuối và hành phi giòn tan. Các cô chú lớn tuổi khó tính trong nhà ai ăn cũng gật gù khen ngon."</p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 flex items-center justify-between">
+              <div><p class="font-bold text-xs text-[#1C150E]">Chị Trương Thảo</p><p class="text-[11px] text-stone-500">Bình Thạnh, TP. Hồ Chí Minh</p></div>
+              <span class="text-[10px] bg-amber-50 text-amber-800 font-semibold px-2 py-0.5 rounded-full">Đặt tiệc gia đình</span>
+            </div>
+          </div>
+          <!-- Review 7: Linh Trịnh -->
+          <div class="w-[320px] sm:w-[350px] shrink-0 p-5 rounded-2xl bg-white border border-[#E5DACD] shadow-xs flex flex-col justify-between hover:shadow-md hover:border-[#9E2A1C]/30 transition-all">
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-1 text-amber-400 text-xs"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">"Đặt giao trưa cho nhóm văn phòng, shipper giao đúng hẹn, hộp giữ nhiệt mở ra khói nghi ngút. Bánh mềm trong, nhân đầy đặn cắn ngập miệng, chấm đẫm mắm ớt là quên lối về."</p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 flex items-center justify-between">
+              <div><p class="font-bold text-xs text-[#1C150E]">Cô Linh Trịnh</p><p class="text-[11px] text-stone-500">Hoàn Kiếm, Hà Nội</p></div>
+              <span class="text-[10px] bg-sky-50 text-sky-700 font-semibold px-2 py-0.5 rounded-full">Ăn trưa văn phòng</span>
+            </div>
+          </div>
+          <!-- Review 8: Thịnh Lynx -->
+          <div class="w-[320px] sm:w-[350px] shrink-0 p-5 rounded-2xl bg-white border-2 border-[#1A4329]/30 shadow-xs flex flex-col justify-between bg-gradient-to-b from-white to-[#F5EDE1] hover:shadow-md hover:border-[#1A4329] transition-all">
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-1 text-amber-400 text-xs"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="text-xs sm:text-sm text-[#4A3B2C] leading-relaxed italic">"Người con Quảng Bình xa quê 6 năm, ăn miếng bánh lọc Nhà Jun mà xúc động nhớ vị mẹ làm ở quê. Tôm đồng đỏ au chắc thịt, măng le giòn sần sật, đúng chất 100% không lai tạp."</p>
+            </div>
+            <div class="pt-3 mt-3 border-t border-stone-100 flex items-center justify-between">
+              <div><p class="font-bold text-xs text-[#1C150E]">Anh Thịnh Lynx</p><p class="text-[11px] text-stone-500">Quận 7, TP. Hồ Chí Minh</p></div>
+              <span class="text-[10px] bg-emerald-50 text-emerald-800 font-semibold px-2 py-0.5 rounded-full">Khách quen 1 năm</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1224,7 +1369,8 @@
           <div class="space-y-2 text-xs sm:text-sm text-stone-300">
             <p>Hotline / Zalo: <strong class="text-white">0395142921</strong> (Quang Sơn)</p>
             <p>Giờ mở cửa: 06:30 – 21:30 hàng ngày</p>
-            <p>Giao hỏa tốc nội thành • Đóng thùng xốp gửi xe khách toàn quốc</p>
+            <p>Giao hỏa tốc nội thành</p>
+            <p>Đóng thùng xốp gửi xe khách toàn quốc</p>
           </div>
         </div>
       </div>
