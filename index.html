@@ -904,28 +904,36 @@
 
     <!-- 2 Callouts at bottom of poster -->
     <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div class="rounded-2xl bg-[#FFFDF9] border-2 border-[#265C38]/30 p-5 flex items-center gap-4 shadow-xs">
-        <div class="w-12 h-12 rounded-2xl bg-[#E8F2EA] flex items-center justify-center shrink-0 p-2">
-          <img src="assets/steaming-pot.png" alt="Biểu tượng nồi hấp bánh chín nóng" width="48" height="48" loading="lazy" class="w-full h-full object-contain">
+      <div class="group rounded-2xl bg-gradient-to-br from-[#FFFDF9] via-[#FAF4EC] to-[#EBF3ED] border-2 border-[#265C38]/30 hover:border-[#265C38]/70 p-5 flex items-start sm:items-center gap-4 shadow-xs hover:shadow-md transition-all duration-300">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#E8F2EA] to-[#D5EADB] flex items-center justify-center shrink-0 border border-[#265C38]/25 shadow-xs group-hover:scale-105 transition-transform duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-[#1A4329]" aria-hidden="true"><path d="M2 12h20"></path><path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path><path d="m4 8 16-4"></path><path d="m8.86 6.78-.45-1.81a2 2 0 0 1 1.45-2.43l1.94-.48a2 2 0 0 1 2.43 1.46l.45 1.8"></path></svg>
         </div>
-        <div>
-          <h3 class="font-serif font-black text-lg text-[#1A4329]">Có nhận hấp chín ăn ngay</h3>
-          <p class="text-xs sm:text-sm text-[#635445] mt-0.5">Giao nóng trong hộp cách nhiệt, kèm nước mắm ớt &amp; ngò rí — inbox Nhà Jun nhé!</p>
-          <a href="https://zalo.me/0395142921" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-[#9E2A1C] hover:underline mt-1 inline-block">
-            Nhắn tin Zalo ngay →
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-2 flex-wrap">
+            <h3 class="font-serif font-black text-lg text-[#1A4329]">Có nhận hấp chín ăn ngay</h3>
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#265C38]/10 text-[#1A4329]">Giao nóng</span>
+          </div>
+          <p class="text-xs sm:text-sm text-[#635445] mt-1 leading-relaxed">Giao nóng trong hộp cách nhiệt, kèm nước mắm ớt &amp; ngò rí — inbox Nhà Jun nhé!</p>
+          <a href="https://zalo.me/0395142921" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#9E2A1C] hover:text-[#7D1F14] transition-colors mt-2">
+            <span>Nhắn tin Zalo ngay</span>
+            <span class="group-hover:translate-x-0.5 transition-transform">→</span>
           </a>
         </div>
       </div>
 
-      <div id="si-le" class="rounded-2xl bg-[#FFFDF9] border-2 border-[#9E2A1C]/30 p-5 flex items-center gap-4 shadow-xs">
-        <div class="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center shrink-0 p-2">
-          <img src="assets/delivery-truck.png" alt="Biểu tượng xe giao hàng sỉ và lẻ toàn quốc" width="48" height="48" loading="lazy" class="w-full h-full object-contain">
+      <div id="si-le" class="group rounded-2xl bg-gradient-to-br from-[#FFFDF9] via-[#FAF4EC] to-[#FCEEEB] border-2 border-[#9E2A1C]/30 hover:border-[#9E2A1C]/70 p-5 flex items-start sm:items-center gap-4 shadow-xs hover:shadow-md transition-all duration-300">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center shrink-0 border border-red-200/80 shadow-xs group-hover:scale-105 transition-transform duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-[#9E2A1C]" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>
         </div>
-        <div>
-          <h3 class="font-serif font-black text-lg text-[#9E2A1C]">Đơn số lượng lớn &amp; Đặt cỗ tiệc</h3>
-          <p class="text-xs sm:text-sm text-[#635445] mt-0.5">Nhận đặt tiệc cưới, liên hoan, lấy sỉ gửi xe liên tỉnh: Inbox để được báo giá ưu đãi!</p>
-          <a href="tel:0395142921" class="text-xs font-bold text-[#1A4329] hover:underline mt-1 inline-block">
-            Gọi nhận báo giá sỉ →
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-2 flex-wrap">
+            <h3 class="font-serif font-black text-lg text-[#9E2A1C]">Đơn số lượng lớn &amp; Đặt cỗ tiệc</h3>
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-red-100 text-[#9E2A1C]">Giá sỉ</span>
+          </div>
+          <p class="text-xs sm:text-sm text-[#635445] mt-1 leading-relaxed">Nhận đặt tiệc cưới, liên hoan, lấy sỉ gửi xe liên tỉnh: Inbox để được báo giá ưu đãi!</p>
+          <a href="tel:0395142921" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#1A4329] hover:text-[#265C38] transition-colors mt-2">
+            <span>Gọi nhận báo giá sỉ</span>
+            <span class="group-hover:translate-x-0.5 transition-transform">→</span>
           </a>
         </div>
       </div>
