@@ -196,9 +196,14 @@
 
     /* ScrollReveal Animation */
     .scroll-reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .scroll-reveal.revealed {
       opacity: 1;
-      transform: none;
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform: translateY(0);
     }
     @keyframes smokeDriftOne {
       0% { transform: translate(-10%, 15%) scale(1) rotate(0deg); opacity: 0; }
@@ -723,6 +728,7 @@
             <span class="bg-[#9E2A1C] font-extrabold px-2 py-0.5 rounded-md text-[11px]">45K / 10 bánh</span>
           </div>
         </div>
+        <div>
           <div class="rounded-xl py-2 px-3 text-center mb-4 text-white font-serif font-black text-xl tracking-wide bg-[#A62B1E]">
             Tôm Thịt Măng
           </div>
@@ -891,30 +897,42 @@
   <!-- Cooking Guide -->
   <section id="huong-dan" class="py-14 bg-[#F5EDE1] border-y border-[#E6D9C8]">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-xl mx-auto mb-10">
+      <div class="text-center max-w-xl mx-auto mb-10 scroll-reveal">
         <span class="text-xs font-bold text-[#265C38] uppercase tracking-widest">Dành Cho Khách Mua Bánh Sống Cấp Đông</span>
         <h2 class="font-serif text-3xl sm:text-4xl font-black text-[#1A4329] mt-1">
           Bí Quyết Hấp Bánh Lọc Chuẩn Mềm Dẻo Tại Nhà
         </h2>
+        <p class="text-[#635445] text-xs sm:text-sm mt-2">
+          Chỉ 25–30 phút là bạn đã có ngay đĩa bánh lọc trong veo, dai dẻo chuẩn vị nhà hàng xứ Quảng
+        </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="rounded-2xl bg-white p-5 border border-[#E2D5C4] shadow-xs">
+        <div class="card-culinary scroll-reveal rounded-2xl bg-white p-5 border border-[#E2D5C4] hover:border-[#265C38]/40 shadow-xs hover:shadow-md transition-all" style="transition-delay: 0ms;">
           <div class="w-8 h-8 rounded-full bg-[#1A4329] text-white font-black text-sm flex items-center justify-center mb-3">1</div>
           <h4 class="font-bold text-[#1C150E] text-base mb-1">Không Cần Rã Đông</h4>
           <p class="text-xs text-[#635445]">Lấy bánh trực tiếp từ ngăn đông tủ lạnh, bóc lớp màng bọc. Không ngâm nước làm nhão bột.</p>
         </div>
-        <div class="rounded-2xl bg-white p-5 border border-[#E2D5C4] shadow-xs">
+        <div class="card-culinary scroll-reveal rounded-2xl bg-white p-5 border border-[#E2D5C4] hover:border-[#265C38]/40 shadow-xs hover:shadow-md transition-all" style="transition-delay: 80ms;">
           <div class="w-8 h-8 rounded-full bg-[#1A4329] text-white font-black text-sm flex items-center justify-center mb-3">2</div>
           <h4 class="font-bold text-[#1C150E] text-base mb-1">Xếp Vào Xửng Hấp</h4>
           <p class="text-xs text-[#635445]">Đun nước thật sôi. Quết một lớp dầu ăn mỏng lên xửng rồi xếp bánh cách nhau 1cm.</p>
         </div>
-        <div class="rounded-2xl bg-white p-5 border border-[#E2D5C4] shadow-xs">
-          <div class="w-8 h-8 rounded-full bg-[#9E2A1C] text-white font-black text-sm flex items-center justify-center mb-3">3</div>
-          <h4 class="font-bold text-[#1C150E] text-base mb-1">Hấp 25–30 Phút</h4>
+        <div class="card-culinary scroll-reveal rounded-2xl bg-[#FFFDF9] p-5 border-2 border-[#9E2A1C]/50 shadow-sm hover:shadow-xl transition-all relative overflow-visible" style="transition-delay: 160ms;">
+          <!-- Animated Steam Wisps on Step 3 -->
+          <div class="absolute -top-3 left-6 flex items-center justify-center gap-1 pointer-events-none z-20">
+            <div class="w-1.5 h-6 bg-gradient-to-t from-[#9E2A1C]/70 via-amber-400/50 to-transparent rounded-full blur-[1px] steam-wisp-1"></div>
+            <div class="w-2 h-8 bg-gradient-to-t from-amber-500/80 via-amber-300/60 to-transparent rounded-full blur-[1px] steam-wisp-2"></div>
+            <div class="w-1.5 h-6 bg-gradient-to-t from-[#9E2A1C]/70 via-amber-400/50 to-transparent rounded-full blur-[1px] steam-wisp-3"></div>
+          </div>
+          <div class="w-8 h-8 rounded-full bg-[#9E2A1C] text-white font-black text-sm flex items-center justify-center mb-3 ring-4 ring-[#9E2A1C]/20 animate-pulse">3</div>
+          <h4 class="font-bold text-[#1C150E] text-base mb-1 flex items-center gap-1">
+            <span>Hấp 25–30 Phút</span>
+            <span class="inline-block w-2 h-2 rounded-full bg-[#9E2A1C] animate-ping ml-1"></span>
+          </h4>
           <p class="text-xs text-[#635445]">Đậy kín nắp, hấp lửa vừa khoảng 25–30 phút đến khi bột chuyển sang màu trong veo.</p>
         </div>
-        <div class="rounded-2xl bg-white p-5 border border-[#E2D5C4] shadow-xs">
+        <div class="card-culinary scroll-reveal rounded-2xl bg-white p-5 border border-[#E2D5C4] hover:border-[#9E2A1C]/40 shadow-xs hover:shadow-md transition-all" style="transition-delay: 240ms;">
           <div class="w-8 h-8 rounded-full bg-[#9E2A1C] text-white font-black text-sm flex items-center justify-center mb-3">4</div>
           <h4 class="font-bold text-[#1C150E] text-base mb-1">Thưởng Thức Nóng</h4>
           <p class="text-xs text-[#635445]">Gắp bánh ra đĩa, rắc hành phi giòn tan lên trên. Chấm cùng chén nước mắm ớt cay nồng Nhà Jun gửi kèm!</p>
