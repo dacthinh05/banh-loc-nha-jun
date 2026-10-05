@@ -1,0 +1,52 @@
+{
+  "brand": "Bánh Lọc Nhà Jun",
+  "tagline": "Đặc Sản Gia Truyền Quảng Bình",
+  "brief": "Định danh thương hiệu cho đặc sản Bánh Lọc Nhà Jun: bột sắn dẻo trong, tôm rim đậm đà, 100% không hàn the. Cần một nhận diện độc quyền, ấm áp gia đình ('Nhà'), nhận biết tức thì ở kích thước nhỏ (16px), in ấn bao bì thực phẩm và đóng mộc con dấu.",
+  "adjectives": [
+    "thủ công",
+    "ấm cúng",
+    "chân thật",
+    "ngon mắt",
+    "hiện đại"
+  ],
+  "criteria": "Nhận diện độc quyền qua chữ j kết hợp nếp gấp bánh lọc thủ công và hạt ngọc tôm rim đỏ son; ứng dụng xuất sắc trên bao bì hộp giấy, túi hút chân không, con dấu và web.",
+  "industry": "food",
+  "mockups": [
+    "bag",
+    "box",
+    "signage",
+    "social",
+    "business-card",
+    "cup"
+  ],
+  "nav": [
+    "Thực Đơn",
+    "Combo 3 Vị",
+    "Bí Quyết Hấp",
+    "Đặt Hàng"
+  ],
+  "brand_color": "#1A4329",
+  "greyscale": false,
+  "designer": "Senior Identity Designer",
+  "round": 2,
+  "concepts": [
+    {
+      "name": "Chữ j Nếp Bánh",
+      "symbol": "../symbol-color.svg",
+      "lockup": "../lockup-horizontal.svg",
+      "idea": "Chữ j (Jun) cách điệu từ nếp gấp bánh lọc dẻo trong, dấu chấm là hạt ngọc tôm rim đỏ son.",
+      "rationale": [
+        "Chữ cái j đại diện trực diện tên thương hiệu Nhà Jun",
+        "Nếp gấp gập mí thủ công tái hiện kỹ thuật gói bánh truyền thống",
+        "Dấu chấm tôm rim đỏ son tạo điểm nhấn vị giác ngon mắt",
+        "Độ tương phản và hình khối vững chắc ở mọi kích thước từ 16px đến biển hiệu"
+      ]
+    }
+  ],
+  "recommendation": "Phương án Chữ j Nếp Bánh đã được phê duyệt làm nhận diện chính thức của Bánh Lọc Nhà Jun.",
+  "next_steps": [
+    "Xuất trọn bộ file Master Vector (SVG, PNG, Web Icons)",
+    "Bàn giao Brand Guidelines quy chuẩn sử dụng thương hiệu",
+    "Tích hợp logo và favicon chính thức lên website dự án"
+  ]
+}

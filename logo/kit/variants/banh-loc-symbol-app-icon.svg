@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256"><title>Bánh Lọc Nhà Jun</title><rect width="256" height="256" rx="57.6" fill="#1A4329"/><g transform="translate(26.2 27.3) scale(0.821)">
+  <title id="titleSymbolSmall">Logo Bánh Lọc Nhà Jun — Biểu Tượng Cỡ Nhỏ (16-24px)</title>
+  <g id="symbol">
+    <!-- Dấu Chấm Chữ j Đỏ Son Phóng Đại Nhẹ (High contrast crimson dot) -->
+    <circle cx="174" cy="48" r="22" fill="#9E2A1C"/>
+    <circle cx="180" cy="42" r="6" fill="#D9822B"/>
+
+    <!-- Thân Chữ j Đậm Nét (Bold robust stem & pleats) -->
+    <path fill="#1A4329" d="M154 82
+      L196 82
+      L196 150
+      C196 190 164 218 124 218
+      C112 218 102 222 92 216
+      C80 210 72 198 70 186
+      C58 184 52 172 52 160
+      C52 146 62 138 74 134
+      C74 122 88 114 104 114
+      C122 114 136 126 136 144
+      C136 154 130 162 120 166
+      C124 172 130 174 138 174
+      C152 174 162 164 162 148
+      L162 82
+      Z"/>
+  </g>
+</g></svg>

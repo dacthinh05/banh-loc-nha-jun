@@ -1,0 +1,43 @@
+<svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="400" height="480" role="img" aria-labelledby="titleLockupS"><title>Bánh Lọc Nhà Jun</title>
+  <title id="titleLockupS">Logo Bánh Lọc Nhà Jun — Lockup Dọc</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&amp;family=Inter:wght@600;700&amp;display=swap');
+      .brand-title-s {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 900;
+        font-size: 38px;
+        fill:#000000;
+        text-anchor: middle;
+        letter-spacing: -0.5px;
+      }
+      .brand-accent-s {
+        fill:#000000;
+      }
+      .brand-sub-s {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        fill:#000000;
+        letter-spacing: 3.5px;
+        text-transform: uppercase;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- Biểu tượng căn giữa ở trên (Symbol centered at top) -->
+  <g transform="translate(100, 24) scale(0.78)">
+    <circle cx="176" cy="46" r="18" fill="#000000"/>
+    <circle cx="182" cy="40" r="4.5" fill="#000000"/>
+    <path fill="#000000" d="M160 82 L192 82 L192 152 C192 188 162 214 126 214 C116 214 106 218 96 214 C86 210 78 200 76 190 C66 188 60 178 60 168 C60 156 68 148 78 144 C78 130 92 120 108 120 C124 120 134 132 134 148 C134 160 126 170 114 174 C118 180 126 184 134 184 C150 184 162 172 162 152 L162 82 Z"/>
+  </g>
+
+  <!-- Tên thương hiệu căn giữa ở dưới (Wordmark centered at bottom) -->
+  <g id="wordmark">
+    <text x="200" y="300" class="brand-title-s">BÁNH LỌC</text>
+    <text x="200" y="348" class="brand-title-s brand-accent-s">NHÀ JUN</text>
+    <circle cx="200" cy="382" r="3" fill="#000000"/>
+    <text x="200" y="414" class="brand-sub-s">ĐẶC SẢN QUẢNG BÌNH</text>
+  </g>
+</svg>

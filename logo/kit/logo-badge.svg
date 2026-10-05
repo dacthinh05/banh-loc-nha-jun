@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Nền tròn kem gốm mộc -->
+  <circle cx="256" cy="256" r="256" fill="#FAF7F2"/>
+  
+  <!-- Viền vành tre mạ vàng nhạt tinh tế -->
+  <circle cx="256" cy="256" r="248" fill="none" stroke="#D9822B" stroke-width="4" stroke-opacity="0.3"/>
+
+  <!-- Logo Concept A Chữ j Nếp Bánh căn giữa quang học -->
+  <g transform="translate(76, 76) scale(1.406)">
+    <!-- Dấu Chấm Chữ j: Hạt Ngọc Tôm Rim Đỏ Son -->
+    <circle cx="176" cy="46" r="18" fill="#9E2A1C"/>
+    <circle cx="182" cy="40" r="4.5" fill="#D9822B"/>
+
+    <!-- Thân Chữ j Bánh Lọc Nếp Gấp -->
+    <path fill="#1A4329" d="M160 82 L192 82 L192 152 C192 188 162 214 126 214 C116 214 106 218 96 214 C86 210 78 200 76 190 C66 188 60 178 60 168 C60 156 68 148 78 144 C78 130 92 120 108 120 C124 120 134 132 134 148 C134 160 126 170 114 174 C118 180 126 184 134 184 C150 184 162 172 162 152 L162 82 Z"/>
+  </g>
+</svg>
